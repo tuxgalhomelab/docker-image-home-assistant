@@ -19,7 +19,7 @@ ARG PACKAGES_TO_INSTALL
 RUN --mount=type=bind,target=/scripts,from=with-scripts,source=/scripts \
     set -e -o pipefail \
     # Install build dependencies. \
-    && homelab install util-linux autoconf build-essential python3-dev \
+    && homelab install util-linux autoconf build-essential rustc python3-dev \
     # Install dependencies. \
     && homelab install $PACKAGES_TO_INSTALL \
     # Create the user and the group. \
@@ -39,7 +39,7 @@ RUN --mount=type=bind,target=/scripts,from=with-scripts,source=/scripts \
     && ln -sf /opt/ha/start-ha.sh /opt/bin/start-ha \
     # Clean up. \
     && rm -rf /home/${USER_NAME:?}/.cache/ \
-    && homelab remove util-linux autoconf build-essential python3-dev \
+    && homelab remove util-linux autoconf build-essential rustc python3-dev \
     && homelab cleanup
 
 ENV USER=${USER_NAME}

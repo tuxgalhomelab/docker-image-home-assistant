@@ -7,5 +7,6 @@ echo "Installing Home Assistant ${ver:?} ..."
 cd /opt/ha
 python3 -m venv .
 source bin/activate
+pip3 install --upgrade --no-cache-dir pip
 pip3 install --no-cache-dir wheel
 pip3 install --no-cache-dir homeassistant==${ver:?}

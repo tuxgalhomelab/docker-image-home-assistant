@@ -2,7 +2,10 @@
 
 ARG BASE_IMAGE_NAME
 ARG BASE_IMAGE_TAG
-FROM scratch AS with-scripts
+ARG WHEELS_IMAGE_NAME
+ARG WHEELS_IMAGE_TAG
+FROM ${WHEELS_IMAGE_NAME}:${WHEELS_IMAGE_TAG} AS builder
+
 COPY scripts/start-ha.sh scripts/install-ha.sh /scripts/
 
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG}
@@ -16,10 +19,12 @@ ARG GROUP_ID
 ARG HOME_ASSISTANT_VERSION
 ARG PACKAGES_TO_INSTALL
 
-RUN --mount=type=bind,target=/scripts,from=with-scripts,source=/scripts \
+RUN \
+    --mount=type=bind,target=/scripts,from=builder,source=/scripts \
+    --mount=type=bind,target=/wheels,from=builder,source=/wheels \
     set -e -o pipefail \
     # Install build dependencies. \
-    && homelab install util-linux autoconf build-essential rustc cargo python3-dev \
+    && homelab install util-linux \
     # Install dependencies. \
     && homelab install $PACKAGES_TO_INSTALL \
     # Create the user and the group. \
@@ -39,7 +44,7 @@ RUN --mount=type=bind,target=/scripts,from=with-scripts,source=/scripts \
     && ln -sf /opt/ha/start-ha.sh /opt/bin/start-ha \
     # Clean up. \
     && rm -rf /home/${USER_NAME:?}/.cache/ \
-    && homelab remove util-linux autoconf build-essential rustc cargo python3-dev \
+    && homelab remove util-linux \
     && homelab cleanup
 
 ENV USER=${USER_NAME}

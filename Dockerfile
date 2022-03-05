@@ -6,7 +6,7 @@ ARG WHEELS_IMAGE_NAME
 ARG WHEELS_IMAGE_TAG
 FROM ${WHEELS_IMAGE_NAME}:${WHEELS_IMAGE_TAG} AS builder
 
-COPY scripts/start-ha.sh scripts/install-ha.sh /scripts/
+COPY scripts/start-hass.sh scripts/install-hass.sh /scripts/
 
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG}
 
@@ -16,7 +16,6 @@ ARG USER_NAME
 ARG GROUP_NAME
 ARG USER_ID
 ARG GROUP_ID
-ARG HOME_ASSISTANT_VERSION
 ARG PACKAGES_TO_INSTALL
 
 RUN \
@@ -34,14 +33,14 @@ RUN \
         ${GROUP_NAME:?} \
         ${GROUP_ID:?} \
         --create-home-dir \
-    && mkdir -p /opt/ha \
+    && mkdir -p /opt/hass \
     # Download and install home assistant, and its dependencies. \
-    && chown -R ${USER_NAME:?}:${USER_NAME:?} /opt/ha \
-    && su --login --shell /bin/bash --command "/scripts/install-ha.sh ${HOME_ASSISTANT_VERSION:?}" ${USER_NAME:?} \
-    # Copy the start-ha.sh script. \
-    && cp /scripts/start-ha.sh /opt/ha/ \
-    && chown -R ${USER_NAME:?}:${USER_NAME:?} /opt/ha \
-    && ln -sf /opt/ha/start-ha.sh /opt/bin/start-ha \
+    && chown -R ${USER_NAME:?}:${USER_NAME:?} /opt/hass \
+    && su --login --shell /bin/bash --command "/scripts/install-hass.sh" ${USER_NAME:?} \
+    # Copy the start-hass.sh script. \
+    && cp /scripts/start-hass.sh /opt/hass/ \
+    && chown -R ${USER_NAME:?}:${USER_NAME:?} /opt/hass \
+    && ln -sf /opt/hass/start-hass.sh /opt/bin/start-hass \
     # Clean up. \
     && rm -rf /home/${USER_NAME:?}/.cache/ \
     && homelab remove util-linux \
@@ -52,6 +51,6 @@ ENV PATH="/opt/bin:${PATH}"
 
 USER ${USER_NAME}:${GROUP_NAME}
 WORKDIR /home/${USER_NAME}
-CMD ["start-ha"]
+CMD ["start-hass"]
 EXPOSE 8123
 STOPSIGNAL SIGTERM

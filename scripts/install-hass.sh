@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -e -o pipefail
 
-ha_ver=${1:?}
+ha_ver="$(ls /wheels/homeassistant-*-py3-none-any.whl | sed -E 's#/wheels/homeassistant-(.+)-py3-none-any.whl#\1#')"
 echo "Installing Home Assistant ${ha_ver:?} ..."
 
-cd /opt/ha
+cd /opt/hass
 python3 -m venv .
 source bin/activate
 

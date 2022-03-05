@@ -1,0 +1,11 @@
+--- a/lib/python3.9/site-packages/homeassistant/helpers/system_info.py	2022-03-05 00:21:19.879992714 -0800
++++ b/lib/python3.9/site-packages/homeassistant/helpers/system_info.py	2022-03-05 00:23:40.611085400 -0800
+@@ -43,6 +43,8 @@
+     if info_object["docker"]:
+         if info_object["user"] == "root" and os.path.isfile("/OFFICIAL_IMAGE"):
+             info_object["installation_type"] = "Home Assistant Container"
++        elif info_object["user"] == "hass" and os.path.isfile("/opt/hass/bin/hass"):
++            info_object["installation_type"] = "Tuxdude Home Lab Home Assistant Container"
+         else:
+             info_object["installation_type"] = "Unsupported Third Party Container"
+ 

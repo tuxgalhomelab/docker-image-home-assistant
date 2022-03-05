@@ -1,0 +1,13 @@
+--- a/lib/python3.9/site-packages/homeassistant/bootstrap.py	2022-03-05 00:45:01.508049155 -0800
++++ b/lib/python3.9/site-packages/homeassistant/bootstrap.py	2022-03-05 00:53:16.616802751 -0800
+@@ -370,8 +370,8 @@
+ 
+         # Save the log file location for access by other components.
+         hass.data[DATA_LOGGING] = err_log_path
+-    else:
+-        _LOGGER.error("Unable to set up error log %s (access denied)", err_log_path)
++    elif err_log_path != "/dev/stdout":
++        _LOGGER.warning("Unable to set up error log %s (access denied)", err_log_path)
+ 
+     async_activate_log_queue_handler(hass)
+ 

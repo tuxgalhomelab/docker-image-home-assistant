@@ -7,6 +7,7 @@ ARG WHEELS_IMAGE_TAG
 FROM ${WHEELS_IMAGE_NAME}:${WHEELS_IMAGE_TAG} AS builder
 
 COPY scripts/start-hass.sh scripts/install-hass.sh /scripts/
+COPY patches /patches
 
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG}
 
@@ -20,10 +21,11 @@ ARG PACKAGES_TO_INSTALL
 
 RUN \
     --mount=type=bind,target=/scripts,from=builder,source=/scripts \
+    --mount=type=bind,target=/patches,from=builder,source=/patches \
     --mount=type=bind,target=/wheels,from=builder,source=/wheels \
     set -e -o pipefail \
     # Install build dependencies. \
-    && homelab install util-linux \
+    && homelab install util-linux patch \
     # Install dependencies. \
     && homelab install $PACKAGES_TO_INSTALL \
     # Create the user and the group. \
@@ -43,7 +45,7 @@ RUN \
     && ln -sf /opt/hass/start-hass.sh /opt/bin/start-hass \
     # Clean up. \
     && rm -rf /home/${USER_NAME:?}/.cache/ \
-    && homelab remove util-linux \
+    && homelab remove util-linux patch \
     && homelab cleanup
 
 ENV USER=${USER_NAME}

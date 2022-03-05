@@ -34,3 +34,6 @@ EOF
 
 # Install Home Assistant and all the wheels present.
 pip3 install --no-cache-dir /wheels/*
+
+# Apply patches.
+find /patches -iname *.diff -print0 | sort -z | xargs -0 -n 1 patch -p1 -i

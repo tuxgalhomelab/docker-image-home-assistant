@@ -35,6 +35,9 @@ RUN \
         ${GROUP_NAME:?} \
         ${GROUP_ID:?} \
         --create-home-dir \
+    # Add the user to the dialout group to be able to access serial devices \
+    # (eg. Zigbee dongle). \
+    && usermod --append --groups dialout ${USER_NAME:?} \
     && mkdir -p /opt/hass \
     # Download and install home assistant, and its dependencies. \
     && chown -R ${USER_NAME:?}:${USER_NAME:?} /opt/hass \

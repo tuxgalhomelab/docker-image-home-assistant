@@ -1,5 +1,5 @@
---- a/lib/python3.9/site-packages/homeassistant/bootstrap.py	2022-03-05 00:45:01.508049155 -0800
-+++ b/lib/python3.9/site-packages/homeassistant/bootstrap.py	2022-03-05 00:53:16.616802751 -0800
+--- a/lib/python3.11/site-packages/homeassistant/bootstrap.py	2022-03-05 00:45:01.508049155 -0800
++++ b/lib/python3.11/site-packages/homeassistant/bootstrap.py	2022-03-05 00:53:16.616802751 -0800
 @@ -370,8 +370,8 @@
  
          # Save the log file location for access by other components.

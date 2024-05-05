@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e -o pipefail
 
+export PYENV_ROOT="/opt/pyenv"
+export PATH="${PYENV_ROOT:?}/shims:${PYENV_ROOT:?}/bin:${PATH:?}"
+
 ha_ver="$(ls /wheels/homeassistant-*-py3-none-any.whl | sed -E 's#/wheels/homeassistant-(.+)-py3-none-any.whl#\1#')"
 echo "Installing Home Assistant ${ha_ver:?} ..."
 

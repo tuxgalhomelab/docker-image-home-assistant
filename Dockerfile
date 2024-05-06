@@ -50,7 +50,7 @@ RUN \
     && su --login --shell /bin/bash --command "/scripts/install-hass.sh" ${USER_NAME:?} \
     # Copy the start-hass.sh script. \
     && cp /scripts/start-hass.sh /opt/hass/ \
-    && chown -R ${USER_NAME:?}:${USER_NAME:?} /opt/hass \
+    && chown -R ${USER_NAME:?}:${GROUP_NAME:?} /opt/hass \
     && ln -sf /opt/hass/start-hass.sh /opt/bin/start-hass \
     # Clean up. \
     && rm -rf /home/${USER_NAME:?}/.cache/ \

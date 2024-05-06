@@ -44,9 +44,9 @@ RUN \
     # Add the user to the dialout group to be able to access serial devices \
     # (eg. Zigbee dongle). \
     && usermod --append --groups dialout ${USER_NAME:?} \
-    && mkdir -p /opt/hass \
+    && mkdir -p /opt/hass /config \
+    && chown -R ${USER_NAME:?}:${GROUP_NAME:?} /opt/hass /config \
     # Download and install home assistant, and its dependencies. \
-    && chown -R ${USER_NAME:?}:${USER_NAME:?} /opt/hass \
     && su --login --shell /bin/bash --command "/scripts/install-hass.sh" ${USER_NAME:?} \
     # Copy the start-hass.sh script. \
     && cp /scripts/start-hass.sh /opt/hass/ \

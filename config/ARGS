@@ -1,4 +1,4 @@
-BASE_IMAGE_NAME=tuxdude/homelab-base
+BASE_IMAGE_NAME=tuxdude/homelab-python-base
 BASE_IMAGE_TAG=master
 WHEELS_IMAGE_NAME=tuxdude/homelab-home-assistant-wheels
 WHEELS_IMAGE_TAG=master
@@ -6,4 +6,3 @@ USER_NAME=hass
 GROUP_NAME=hass
 USER_ID=16004
 GROUP_ID=16004
-HOME_ASSISTANT_PYTHON_VERSION=3.12.2

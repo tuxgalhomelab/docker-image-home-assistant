@@ -18,12 +18,6 @@ ARG GROUP_NAME
 ARG USER_ID
 ARG GROUP_ID
 ARG PACKAGES_TO_INSTALL
-ARG HOME_ASSISTANT_PYTHON_VERSION
-
-RUN homelab install-python ${HOME_ASSISTANT_PYTHON_VERSION:?}
-
-ENV PYENV_ROOT="/opt/pyenv"
-ENV PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
 
 RUN \
     --mount=type=bind,target=/scripts,from=builder,source=/scripts \

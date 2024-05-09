@@ -56,6 +56,7 @@ pkg_ver="${2:?}"
 git branch temp-release
 git checkout temp-release
 update_latest_version BASE_IMAGE
+update_latest_version WHEELS_IMAGE
 git add ${ARGS_FILE:?}
 git commit -m "feat: Prepare for ${rel_ver:?} release based off ${pkg:?} ${pkg_ver:?}"
 echo "Creating tag ${rel_ver:?}-${tag_pkg}-${pkg_ver:?}"

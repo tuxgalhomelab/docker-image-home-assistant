@@ -25,7 +25,7 @@ RUN \
     --mount=type=bind,target=/wheels,from=builder,source=/wheels \
     set -e -o pipefail \
     # Install build dependencies. \
-    && homelab install util-linux patch \
+    && homelab install patch \
     # Install dependencies. \
     && homelab install $PACKAGES_TO_INSTALL \
     # Create the user and the group. \
@@ -48,7 +48,7 @@ RUN \
     && ln -sf /opt/hass/start-hass.sh /opt/bin/start-hass \
     # Clean up. \
     && rm -rf /home/${USER_NAME:?}/.cache/ \
-    && homelab remove util-linux patch \
+    && homelab remove patch \
     && homelab cleanup
 
 ENV USER=${USER_NAME}

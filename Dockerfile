@@ -2,12 +2,59 @@
 
 ARG BASE_IMAGE_NAME
 ARG BASE_IMAGE_TAG
-ARG WHEELS_IMAGE_NAME
-ARG WHEELS_IMAGE_TAG
-FROM ${WHEELS_IMAGE_NAME}:${WHEELS_IMAGE_TAG} AS builder
+FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG} AS builder
 
+SHELL ["/bin/bash", "-c"]
+
+ARG HASS_PKG_UTIL_VERSION
+ARG HOME_ASSISTANT_VERSION
+ARG PY_PKG_PIP_VERSION
+ARG PY_PKG_WHEEL_VERSION
+ARG PACKAGES_TO_INSTALL
+
+RUN \
+    set -e -o pipefail \
+    # Install dependencies. \
+    && homelab install ${PACKAGES_TO_INSTALL:?} \
+    # Install build specific dependencies. \
+    && homelab install libcups2-dev \
+    && mkdir -p /config /root/hass /root/hass /wheels /.wheels-build-info /scripts /patches
+
+COPY config/disabled-integrations.txt /config/
+COPY config/enabled-integrations.txt /config/
 COPY scripts/start-hass.sh scripts/install-hass.sh /scripts/
 COPY patches /patches
+
+WORKDIR /root/hass
+
+# hadolint ignore=DL4006,SC1091
+RUN \
+    set -e -o pipefail \
+    # Install hasspkgutil. \
+    && homelab install-tuxdude-go-package TuxdudeHomeLab/hasspkgutil ${HASS_PKG_UTIL_VERSION:?} \
+    # Generate the requirements and constraint list for Home Assistant \
+    # Core and also all the integrations we want to enable. \
+    && hasspkgutil \
+        -ha-version ${HOME_ASSISTANT_VERSION:?} \
+        -enabled-integrations /config/enabled-integrations.txt \
+        -disabled-integrations /config/disabled-integrations.txt \
+        -output-requirements requirements.txt \
+        -output-constraints constraints.txt \
+    && cp requirements.txt /.wheels-build-info/build_requirements.txt \
+    && cp constraints.txt /.wheels-build-info/build_constraints.txt \
+    # Set up the virtual environment for building the wheels. \
+    && python3 -m venv . \
+    && source bin/activate \
+    && pip3 install --no-cache-dir --progress-bar off --upgrade pip==${PY_PKG_PIP_VERSION:?} \
+    && pip3 install --no-cache-dir --progress-bar off --upgrade wheel==${PY_PKG_WHEEL_VERSION:?} \
+    # Build the wheels. \
+    && MAKEFLAGS="-j$(nproc)" pip3 wheel \
+        --no-cache-dir \
+        --progress-bar off \
+        --wheel-dir=/wheels \
+        --find-links=/wheels \
+        --requirement requirements.txt \
+        --constraint constraints.txt
 
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG}
 
@@ -27,7 +74,7 @@ RUN \
     # Install build dependencies. \
     && homelab install patch \
     # Install dependencies. \
-    && homelab install $PACKAGES_TO_INSTALL \
+    && homelab install ${PACKAGES_TO_INSTALL:?} \
     # Create the user and the group. \
     && homelab add-user \
         ${USER_NAME:?} \

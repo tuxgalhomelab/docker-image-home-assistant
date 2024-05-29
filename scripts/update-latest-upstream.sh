@@ -15,7 +15,8 @@ git_repo_get_all_tags() {
         --sort='version:refname' \
         --tags \
         ${git_repo:?} '*.*.*' | \
-        cut --delimiter='/' --fields=3
+        cut --delimiter='/' --fields=3 | \
+        grep -P -v '^.+\.\d+b\d+$'
 }
 
 git_repo_latest_tag() {

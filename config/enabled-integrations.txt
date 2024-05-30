@@ -28,8 +28,8 @@ google_cloud
 google_generative_ai_conversation
 google_mail
 google_maps
-google_sheets
 google_pubsub
+google_sheets
 google_tasks
 google_translate
 google_travel_time
@@ -54,8 +54,8 @@ mobile_app
 mqtt
 nest
 network
-openweathermap
 opensky
+openweathermap
 otp
 pi_hole
 ping
@@ -65,8 +65,8 @@ prometheus
 proxy
 python_script
 qrcode
-radio_browser
 radarr
+radio_browser
 recorder
 rest
 roborock

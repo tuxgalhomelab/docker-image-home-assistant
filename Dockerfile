@@ -35,6 +35,7 @@ RUN \
     # Generate the requirements and constraint list for Home Assistant \
     # Core and also all the integrations we want to enable. \
     && hasspkgutil \
+        -mode-generate \
         -ha-version ${HOME_ASSISTANT_VERSION:?} \
         -enabled-integrations /config/enabled-integrations.txt \
         -disabled-integrations /config/disabled-integrations.txt \

@@ -28,6 +28,7 @@ update_integration_files() {
     local hasspkgutil_version=$(get_config_arg "HASS_PKG_UTIL_VERSION")
     local base_image=$(get_config_arg "BASE_IMAGE_NAME"):$(get_config_arg "BASE_IMAGE_TAG")
     docker run --rm -v ${ENABLED_INTGRATIONS_FILE:?}:/root/ei.txt -v ${DISABLED_INTGRATIONS_FILE:?}:/root/di.txt ${base_image:?} sh -c "homelab install-tuxdude-go-package TuxdudeHomeLab/hasspkgutil ${hasspkgutil_version:?} >/dev/null 2>&1 && hasspkgutil -mode-update -ha-version ${ha_version:?} -enabled-integrations /root/ei.txt -disabled-integrations /root/di.txt"
+    git add ${ENABLED_INTGRATIONS_FILE:?} ${DISABLED_INTGRATIONS_FILE:?}
 }
 
 update_latest_upstream_version() {

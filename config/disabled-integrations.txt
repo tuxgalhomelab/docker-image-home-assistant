@@ -9,6 +9,7 @@ advantage_air
 aemet
 aftership
 agent_dvr
+airgradient
 airly
 airnow
 airq
@@ -25,7 +26,6 @@ alarmdecoder
 alpha_vantage
 amazon_polly
 amberelectric
-ambiclimate
 ambient_network
 ambient_station
 amcrest
@@ -42,6 +42,7 @@ apcupsd
 apple_tv
 apprise
 aprilaire
+apsystems
 aqualogic
 aquostv
 aranet
@@ -64,6 +65,7 @@ avion
 awair
 aws
 axis
+azure_data_explorer
 azure_devops
 azure_event_hub
 azure_service_bus
@@ -307,6 +309,7 @@ ifttt
 iglo
 ign_sismologia
 ihc
+imgw_pib
 incomfort
 influxdb
 inkbird
@@ -412,6 +415,7 @@ modem_callerid
 modern_forms
 moehlenhoff_alpha2
 monoprice
+monzo
 mopeka
 motion_blinds
 motionblinds_ble
@@ -701,6 +705,7 @@ tfiac
 thermobeacon
 thermopro
 thermoworks_smoke
+thethingsnetwork
 thingspeak
 thinkingcleaner
 tibber

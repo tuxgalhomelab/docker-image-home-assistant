@@ -41,6 +41,7 @@ html5
 image_upload
 imap
 improv_ble
+isal
 iss
 jellyfin
 keyboard

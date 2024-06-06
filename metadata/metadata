@@ -4,6 +4,8 @@ set -e -o pipefail
 # Add repo specific metadata here.
 
 PACKAGE_NAME="Home Assistant"
+RELEASE_PACKAGE_NAME="Home Assistant"
+RELEASE_TAG_PACKAGE_NAME="ha"
 UPSTREAM_IMAGE_CONFIG_KEY_PREFIX="BASE_IMAGE"
 UPSTREAM_VERSION_CONFIG_KEY="HOME_ASSISTANT_VERSION"
 UPSTREAM_GIT_REPO="https://github.com/home-assistant/core"
@@ -38,6 +40,10 @@ update_latest_upstream_version() {
     echo "Updating ${PACKAGE_NAME:?} ${UPSTREAM_VERSION_CONFIG_KEY:?} '${cur_ver:?}' -> '${latest_ver:?}'"
     set_config_arg "${UPSTREAM_VERSION_CONFIG_KEY:?}" "${latest_ver:?}"
     git add ${ARGS_FILE:?}
+}
+
+package_current_release_version() {
+    current_upstream_version
 }
 
 test_start_container() {

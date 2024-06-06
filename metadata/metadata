@@ -6,7 +6,7 @@ set -e -o pipefail
 PACKAGE_NAME="Home Assistant"
 RELEASE_PACKAGE_NAME="Home Assistant"
 RELEASE_TAG_PACKAGE_NAME="ha"
-UPSTREAM_IMAGE_CONFIG_KEY_PREFIX="BASE_IMAGE"
+BASE_IMAGE_CONFIG_KEY_PREFIX="BASE_IMAGE"
 UPSTREAM_VERSION_CONFIG_KEY="HOME_ASSISTANT_VERSION"
 UPSTREAM_GIT_REPO="https://github.com/home-assistant/core"
 GIT_REPO_TAGS_CUSTOM_FILTERING_REGEX='^.+\.\d+b\d+$'
@@ -22,7 +22,7 @@ current_upstream_version() {
 }
 
 latest_upstream_version() {
-    git_repo_latest_tag "${UPSTREAM_GIT_REPO:?}.git"
+    git_remote_repo_latest_tag "${UPSTREAM_GIT_REPO:?}.git"
 }
 
 update_integration_files() {

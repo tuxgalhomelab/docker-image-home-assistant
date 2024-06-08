@@ -3,19 +3,21 @@ set -e -o pipefail
 
 # Add repo specific metadata here.
 
-PACKAGE_NAME="Home Assistant"
+BASE_IMAGE_CONFIG_KEY_PREFIX="BASE_IMAGE"
+ENABLED_INTGRATIONS_FILE="${repo_dir:?}/config/enabled-integrations.txt"
+DISABLED_INTGRATIONS_FILE="${repo_dir:?}/config/disabled-integrations.txt"
+
 RELEASE_PACKAGE_NAME="Home Assistant"
 RELEASE_TAG_PACKAGE_NAME="ha"
-BASE_IMAGE_CONFIG_KEY_PREFIX="BASE_IMAGE"
+
+UPSTREAM_PACKAGE_NAME="Home Assistant"
 UPSTREAM_VERSION_CONFIG_KEY="HOME_ASSISTANT_VERSION"
 UPSTREAM_GIT_REPO="https://github.com/home-assistant/core"
 GIT_REPO_TAGS_CUSTOM_FILTERING_REGEX='^.+\.\d+b\d+$'
+
 TEST_TYPE="background"
 TEST_CONTAINER_TYPE="homeassistant"
 TEST_CONTAINER_START_WAIT_SECONDS="10"
-
-ENABLED_INTGRATIONS_FILE="${repo_dir:?}/config/enabled-integrations.txt"
-DISABLED_INTGRATIONS_FILE="${repo_dir:?}/config/disabled-integrations.txt"
 
 current_upstream_version() {
     get_config_arg ${UPSTREAM_VERSION_CONFIG_KEY:?}

@@ -24,7 +24,7 @@ current_upstream_version() {
 }
 
 latest_upstream_version() {
-    git_remote_repo_latest_tag "${UPSTREAM_GIT_REPO:?}.git"
+    git_remote_repo_latest_tag "${UPSTREAM_GIT_REPO:?}"
 }
 
 update_integration_files() {

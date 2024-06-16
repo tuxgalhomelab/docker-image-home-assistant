@@ -13,7 +13,7 @@ ARG PY_PKG_WHEEL_VERSION
 ARG PACKAGES_TO_INSTALL
 
 RUN \
-    set -e -o pipefail \
+    set -E -e -o pipefail \
     # Install dependencies. \
     && homelab install ${PACKAGES_TO_INSTALL:?} \
     # Install build specific dependencies. \
@@ -29,7 +29,7 @@ WORKDIR /root/hass
 
 # hadolint ignore=DL4006,SC1091
 RUN \
-    set -e -o pipefail \
+    set -E -e -o pipefail \
     # Install hasspkgutil. \
     && homelab install-tuxdude-go-package TuxdudeHomeLab/hasspkgutil ${HASS_PKG_UTIL_VERSION:?} \
     # Generate the requirements and constraint list for Home Assistant \
@@ -71,7 +71,7 @@ RUN \
     --mount=type=bind,target=/scripts,from=builder,source=/scripts \
     --mount=type=bind,target=/patches,from=builder,source=/patches \
     --mount=type=bind,target=/wheels,from=builder,source=/wheels \
-    set -e -o pipefail \
+    set -E -e -o pipefail \
     # Install build dependencies. \
     && homelab install patch \
     # Install dependencies. \

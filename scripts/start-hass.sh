@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e -o pipefail
+set -E -e -o pipefail
 
 start_home_assistant () {
     echo "Starting Home Assistant ..."

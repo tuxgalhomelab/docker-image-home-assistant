@@ -21,7 +21,6 @@ airvisual
 airvisual_pro
 airzone
 airzone_cloud
-aladdin_connect
 alarmdecoder
 alpha_vantage
 amazon_polly
@@ -43,6 +42,7 @@ apple_tv
 apprise
 aprilaire
 apsystems
+aquacell
 aqualogic
 aquostv
 aranet
@@ -102,7 +102,6 @@ caldav
 canary
 ccm15
 channels
-circuit
 cisco_ios
 cisco_mobility_express
 clementine
@@ -179,6 +178,7 @@ elmax
 elv
 elvia
 emby
+emoncms
 emonitor
 emulated_kasa
 emulated_roku
@@ -323,6 +323,7 @@ ipp
 iqvia
 irish_rail_transport
 islamic_prayer_times
+ista_ecotrend
 isy994
 itach
 izone
@@ -342,6 +343,7 @@ keymitt_ble
 kira
 kiwi
 kmtronic
+knocki
 knx
 kodi
 konnected
@@ -389,6 +391,7 @@ marytts
 mastodon
 matrix
 maxcube
+mealie
 meater
 medcom_ble
 mediaroom
@@ -539,6 +542,7 @@ pushbullet
 pushover
 pvoutput
 pvpc_hourly_pricing
+pyload
 qbittorrent
 qingping
 qld_bushfire

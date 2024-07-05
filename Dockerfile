@@ -99,11 +99,11 @@ RUN \
     && homelab remove patch \
     && homelab cleanup
 
-ENV USER=${USER_NAME}
-ENV PATH="/opt/bin:${PATH}"
+EXPOSE 8123
 
+ENV USER=${USER_NAME}
 USER ${USER_NAME}:${GROUP_NAME}
 WORKDIR /home/${USER_NAME}
+
 CMD ["start-hass"]
-EXPOSE 8123
 STOPSIGNAL SIGTERM

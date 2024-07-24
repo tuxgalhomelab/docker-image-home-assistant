@@ -57,6 +57,7 @@ nest
 network
 opensky
 openweathermap
+opower
 otp
 pi_hole
 ping

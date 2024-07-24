@@ -497,7 +497,6 @@ opensensemap
 opentherm_gw
 openuv
 opnsense
-opower
 opple
 oralb
 oru

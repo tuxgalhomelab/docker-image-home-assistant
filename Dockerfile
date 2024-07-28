@@ -22,6 +22,7 @@ RUN \
 
 COPY config/disabled-integrations.txt /config/
 COPY config/enabled-integrations.txt /config/
+COPY config/extra-requirements.txt /config/
 COPY scripts/start-hass.sh scripts/install-hass.sh /scripts/
 COPY patches /patches
 
@@ -41,6 +42,7 @@ RUN \
         -disabled-integrations /config/disabled-integrations.txt \
         -output-requirements requirements.txt \
         -output-constraints constraints.txt \
+    && cat /config/extra-requirements.txt >> requirements.txt \
     && cp requirements.txt /.wheels-build-info/build_requirements.txt \
     && cp constraints.txt /.wheels-build-info/build_constraints.txt \
     # Set up the virtual environment for building the wheels. \

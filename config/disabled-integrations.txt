@@ -113,6 +113,7 @@ coinbase
 color_extractor
 comelit
 comfoconnect
+concord232
 control4
 coolmaster
 cppm_tracker

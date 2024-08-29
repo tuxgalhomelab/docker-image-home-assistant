@@ -10,6 +10,7 @@ ARG PY_PKG_PIP_VERSION
 ARG PY_PKG_WHEEL_VERSION
 ARG PACKAGES_TO_INSTALL
 
+# hadolint ignore=SC3040
 RUN \
     set -E -e -o pipefail \
     && export HOMELAB_VERBOSE=y \
@@ -67,6 +68,7 @@ ARG USER_ID
 ARG GROUP_ID
 ARG PACKAGES_TO_INSTALL
 
+# hadolint ignore=SC3040
 RUN \
     --mount=type=bind,target=/scripts,from=builder,source=/scripts \
     --mount=type=bind,target=/patches,from=builder,source=/patches \

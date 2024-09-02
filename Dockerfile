@@ -13,7 +13,7 @@ ARG PACKAGES_TO_INSTALL
 COPY config/disabled-integrations.txt /config/
 COPY config/enabled-integrations.txt /config/
 COPY config/extra-requirements.txt /config/
-COPY scripts/start-hass.sh scripts/install-hass.sh /scripts/
+COPY scripts/start-home-assistant.sh scripts/install-home-assistant.sh /scripts/
 COPY patches /patches
 
 # hadolint ignore=SC1091,SC3040,SC3044
@@ -26,8 +26,8 @@ RUN \
     && homelab install libcups2-dev \
     # Install hasspkgutil. \
     && homelab install-tuxdude-go-package TuxdudeHomeLab/hasspkgutil ${HASS_PKG_UTIL_VERSION:?} \
-    && mkdir -p /root/hass-build /wheels /.wheels-build-info \
-    && pushd /root/hass-build \
+    && mkdir -p /root/home-assistant-build /wheels /.wheels-build-info \
+    && pushd /root/home-assistant-build \
     # Generate the requirements and constraint list for Home Assistant \
     # Core and also all the integrations we want to enable. \
     && hasspkgutil \
@@ -84,14 +84,14 @@ RUN \
     # Add the user to the dialout group to be able to access serial devices \
     # (eg. Zigbee dongle). \
     && usermod --append --groups dialout ${USER_NAME:?} \
-    && mkdir -p /opt/hass /config \
-    && chown -R ${USER_NAME:?}:${GROUP_NAME:?} /opt/hass /config \
+    && mkdir -p /opt/home-assistant /config \
+    && chown -R ${USER_NAME:?}:${GROUP_NAME:?} /opt/home-assistant /config \
     # Download and install home assistant, and its dependencies. \
-    && su --login --shell /bin/bash --command "/scripts/install-hass.sh" ${USER_NAME:?} \
-    # Copy the start-hass.sh script. \
-    && cp /scripts/start-hass.sh /opt/hass/ \
-    && chown -R ${USER_NAME:?}:${GROUP_NAME:?} /opt/hass \
-    && ln -sf /opt/hass/start-hass.sh /opt/bin/start-hass \
+    && su --login --shell /bin/bash --command "/scripts/install-home-assistant.sh" ${USER_NAME:?} \
+    # Copy the start-home-assistant.sh script. \
+    && cp /scripts/start-home-assistant.sh /opt/home-assistant/ \
+    && chown -R ${USER_NAME:?}:${GROUP_NAME:?} /opt/home-assistant \
+    && ln -sf /opt/home-assistant/start-home-assistant.sh /opt/bin/start-home-assistant \
     # Clean up. \
     && rm -rf /home/${USER_NAME:?}/.cache/ \
     && homelab remove patch \
@@ -103,5 +103,5 @@ ENV USER=${USER_NAME}
 USER ${USER_NAME}:${GROUP_NAME}
 WORKDIR /home/${USER_NAME}
 
-CMD ["start-hass"]
+CMD ["start-home-assistant"]
 STOPSIGNAL SIGTERM

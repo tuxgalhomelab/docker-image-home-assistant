@@ -10,7 +10,7 @@ set_umask() {
 start_home_assistant () {
     echo "Starting Home Assistant ..."
     echo
-    cd /opt/hass
+    cd /opt/home-assistant
     source bin/activate
     exec hass --config /config --log-file /dev/stdout --log-rotate-days 0
 }

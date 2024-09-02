@@ -10,7 +10,13 @@ ARG PY_PKG_PIP_VERSION
 ARG PY_PKG_WHEEL_VERSION
 ARG PACKAGES_TO_INSTALL
 
-# hadolint ignore=SC3040
+COPY config/disabled-integrations.txt /config/
+COPY config/enabled-integrations.txt /config/
+COPY config/extra-requirements.txt /config/
+COPY scripts/start-hass.sh scripts/install-hass.sh /scripts/
+COPY patches /patches
+
+# hadolint ignore=SC1091,SC3040,SC3044
 RUN \
     set -E -e -o pipefail \
     && export HOMELAB_VERBOSE=y \
@@ -18,22 +24,10 @@ RUN \
     && homelab install ${PACKAGES_TO_INSTALL:?} \
     # Install build specific dependencies. \
     && homelab install libcups2-dev \
-    && mkdir -p /config /root/hass /root/hass /wheels /.wheels-build-info /scripts /patches
-
-COPY config/disabled-integrations.txt /config/
-COPY config/enabled-integrations.txt /config/
-COPY config/extra-requirements.txt /config/
-COPY scripts/start-hass.sh scripts/install-hass.sh /scripts/
-COPY patches /patches
-
-WORKDIR /root/hass
-
-# hadolint ignore=DL4006,SC1091
-RUN \
-    set -E -e -o pipefail \
-    && export HOMELAB_VERBOSE=y \
     # Install hasspkgutil. \
     && homelab install-tuxdude-go-package TuxdudeHomeLab/hasspkgutil ${HASS_PKG_UTIL_VERSION:?} \
+    && mkdir -p /root/hass-build /wheels /.wheels-build-info \
+    && pushd /root/hass-build \
     # Generate the requirements and constraint list for Home Assistant \
     # Core and also all the integrations we want to enable. \
     && hasspkgutil \
@@ -58,7 +52,8 @@ RUN \
         --wheel-dir=/wheels \
         --find-links=/wheels \
         --requirement requirements.txt \
-        --constraint constraints.txt
+        --constraint constraints.txt \
+    && popd
 
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG}
 

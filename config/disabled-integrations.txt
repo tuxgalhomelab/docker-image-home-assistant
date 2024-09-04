@@ -35,6 +35,7 @@ androidtv
 anel_pwrctrl
 anova
 anthemav
+anthropic
 aosmith
 apache_kafka
 apcupsd
@@ -51,7 +52,6 @@ arris_tg2492lg
 aruba
 arve
 aseko_pool_live
-asterisk_mbox
 asuswrt
 atag
 aten_pe
@@ -240,6 +240,7 @@ fritzbox
 fritzbox_callmonitor
 fronius
 frontier_silicon
+fujitsu_fglair
 fully_kiosk
 futurenow
 fyta
@@ -381,7 +382,6 @@ lirc
 litejet
 litterrobot
 livisi
-logi_circle
 london_underground
 lookin
 loqed
@@ -458,6 +458,7 @@ nextcloud
 nextdns
 nfandroidtv
 nibe_heatpump
+nice_go
 nightscout
 niko_home_control
 nilu
@@ -644,6 +645,7 @@ smart_meter_texas
 smartthings
 smarttub
 smhi
+smlight
 sms
 snapcast
 snmp
@@ -730,6 +732,7 @@ tomorrowio
 toon
 totalconnect
 touchline
+touchline_sl
 tplink
 tplink_lte
 tplink_omada
@@ -811,6 +814,7 @@ xiaomi_ble
 xiaomi_miio
 xiaomi_tv
 xs1
+yale
 yale_smart_alarm
 yalexs_ble
 yandex_transport

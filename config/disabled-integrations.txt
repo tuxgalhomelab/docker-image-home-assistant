@@ -100,6 +100,7 @@ bt_smarthub
 bthome
 buienradar
 caldav
+cambridge_audio
 canary
 ccm15
 chacon_dio
@@ -122,6 +123,7 @@ crownstone
 daikin
 danfoss_air
 datadog
+deako
 debugpy
 deconz
 decora
@@ -150,6 +152,7 @@ dormakaba_dkey
 dremel_3d_printer
 drop_connect
 dsmr
+duke_energy
 dunehd
 duotecno
 dwd_weather_warnings
@@ -261,6 +264,7 @@ glances
 goalzero
 gogogate2
 goodwe
+google_photos
 govee_ble
 govee_light_local
 gpsd
@@ -274,6 +278,7 @@ guardian
 habitica
 harman_kardon_avr
 harmony
+hassio
 hdmi_cec
 heatmiser
 heos
@@ -327,6 +332,7 @@ ipp
 iqvia
 irish_rail_transport
 iron_os
+iskra
 islamic_prayer_times
 israel_rail
 ista_ecotrend
@@ -369,6 +375,7 @@ lcn
 ld2410_ble
 leaone
 led_ble
+lektrico
 lg_netcast
 lg_soundbar
 lifx
@@ -424,6 +431,7 @@ modbus
 modem_callerid
 modern_forms
 moehlenhoff_alpha2
+monarch_money
 monoprice
 monzo
 mopeka
@@ -479,6 +487,7 @@ numato
 nut
 nws
 nx584
+nyt_games
 nzbget
 oasa_telematics
 obihai
@@ -616,6 +625,7 @@ sensibo
 sensirion_ble
 sensorpro
 sensorpush
+sensoterra
 sentry
 senz
 serial_pm
@@ -644,6 +654,7 @@ smappee
 smart_meter_texas
 smartthings
 smarttub
+smarty
 smhi
 smlight
 sms
@@ -714,10 +725,8 @@ tesla_fleet
 tesla_wall_connector
 teslemetry
 tessie
-tfiac
 thermobeacon
 thermopro
-thermoworks_smoke
 thethingsnetwork
 thingspeak
 thinkingcleaner
@@ -745,6 +754,7 @@ trafikverket_train
 trafikverket_weatherstation
 transport_nsw
 travisci
+triggercmd
 tuya
 twentemilieu
 twilio
@@ -796,6 +806,7 @@ weatherflow_cloud
 weatherkit
 webmin
 webostv
+weheat
 wemo
 whirlpool
 wiffi
@@ -804,6 +815,7 @@ wirelesstag
 withings
 wiz
 wled
+wmspro
 wolflink
 ws66i
 wyoming

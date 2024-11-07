@@ -4,7 +4,7 @@ ARG BASE_IMAGE_NAME
 ARG BASE_IMAGE_TAG
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG} AS builder
 
-ARG HASS_PKG_UTIL_VERSION
+ARG HA_PKG_UTIL_VERSION
 ARG HOME_ASSISTANT_VERSION
 ARG PY_PKG_PIP_VERSION
 ARG PY_PKG_WHEEL_VERSION
@@ -24,13 +24,13 @@ RUN \
     && homelab install ${PACKAGES_TO_INSTALL:?} \
     # Install build specific dependencies. \
     && homelab install libcups2-dev \
-    # Install hasspkgutil. \
-    && homelab install-tuxdude-go-package TuxdudeHomeLab/hasspkgutil ${HASS_PKG_UTIL_VERSION:?} \
+    # Install hapkgutil. \
+    && homelab install-tuxgal-go-package tuxgal/hapkgutil ${HA_PKG_UTIL_VERSION:?} \
     && mkdir -p /root/home-assistant-build /wheels /.wheels-build-info \
     && pushd /root/home-assistant-build \
     # Generate the requirements and constraint list for Home Assistant \
     # Core and also all the integrations we want to enable. \
-    && hasspkgutil \
+    && hapkgutil \
         -mode-generate \
         -ha-version ${HOME_ASSISTANT_VERSION:?} \
         -enabled-integrations /config/enabled-integrations.txt \

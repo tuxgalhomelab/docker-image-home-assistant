@@ -5,7 +5,7 @@
          if info_object["user"] == "root" and os.path.isfile("/OFFICIAL_IMAGE"):
              info_object["installation_type"] = "Home Assistant Container"
 +        elif info_object["user"] == "ha" and os.path.isfile("/opt/home-assistant/bin/hass"):
-+            info_object["installation_type"] = "Tuxdude Home Lab Home Assistant Container"
++            info_object["installation_type"] = "Tuxgal Homelab Home Assistant Container"
          else:
              info_object["installation_type"] = "Unsupported Third Party Container"
  

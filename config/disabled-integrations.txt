@@ -107,6 +107,7 @@ chacon_dio
 channels
 cisco_ios
 cisco_mobility_express
+cisco_webex_teams
 clementine
 cloudflare
 cmus
@@ -261,6 +262,7 @@ github
 gitlab_ci
 gitter
 glances
+go2rtc
 goalzero
 gogogate2
 goodwe
@@ -302,6 +304,7 @@ hue
 huisbaasje
 hunterdouglas_powerview
 husqvarna_automower
+husqvarna_automower_ble
 huum
 hvv_departures
 hydrawise
@@ -378,6 +381,7 @@ led_ble
 lektrico
 lg_netcast
 lg_soundbar
+lg_thinq
 lifx
 lightwave
 limitlessled
@@ -525,6 +529,7 @@ overkiz
 ovo_energy
 owntracks
 p1_monitor
+palazzetti
 panasonic_bluray
 panasonic_viera
 pandora
@@ -673,7 +678,6 @@ sonos
 sony_projector
 soundtouch
 spc
-spider
 splunk
 squeezebox
 srp_energy

@@ -262,7 +262,6 @@ github
 gitlab_ci
 gitter
 glances
-go2rtc
 goalzero
 gogogate2
 goodwe

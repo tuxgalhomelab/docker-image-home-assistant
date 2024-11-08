@@ -23,6 +23,7 @@ folder_watcher
 frontend
 generic
 geo_json_events
+go2rtc
 google
 google_assistant_sdk
 google_cloud

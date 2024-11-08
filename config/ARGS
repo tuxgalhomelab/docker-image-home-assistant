@@ -1,5 +1,5 @@
 BASE_IMAGE_NAME=tuxgal/homelab-python-base
-BASE_IMAGE_TAG=master
+BASE_IMAGE_TAG=0.3.0-bookworm-20241016-slim-python-3.12.7
 USER_NAME=ha
 GROUP_NAME=ha
 USER_ID=16004

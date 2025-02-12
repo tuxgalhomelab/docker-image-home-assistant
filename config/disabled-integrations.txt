@@ -1,4 +1,5 @@
 abode
+acaia
 accuweather
 acer_projector
 acmeda
@@ -117,6 +118,7 @@ comelit
 comfoconnect
 concord232
 control4
+cookidoo
 coolmaster
 cppm_tracker
 cpuspeed
@@ -174,6 +176,7 @@ edimax
 edl21
 efergy
 egardia
+eheimdigital
 electrasmart
 electric_kiwi
 elevenlabs
@@ -265,6 +268,7 @@ glances
 goalzero
 gogogate2
 goodwe
+google_drive
 google_photos
 govee_ble
 govee_light_local
@@ -291,6 +295,8 @@ hive
 hko
 hlk_sw16
 home_connect
+homeassistant_hardware
+homee
 homematic
 homematicip_cloud
 homewizard
@@ -317,6 +323,7 @@ idasen_desk
 idteck_prox
 ifttt
 iglo
+igloohome
 ign_sismologia
 ihc
 imgw_pib
@@ -340,6 +347,7 @@ israel_rail
 ista_ecotrend
 isy994
 itach
+ituran
 izone
 jewish_calendar
 joaoapps_join
@@ -378,6 +386,7 @@ ld2410_ble
 leaone
 led_ble
 lektrico
+letpot
 lg_netcast
 lg_soundbar
 lg_thinq
@@ -408,6 +417,8 @@ marytts
 mastodon
 matrix
 maxcube
+mcp
+mcp_server
 mealie
 meater
 medcom_ble
@@ -445,6 +456,7 @@ motionmount
 mpd
 msteams
 mullvad
+music_assistant
 mutesync
 mysensors
 mystrom
@@ -454,6 +466,7 @@ nad
 nam
 namecheapdns
 nanoleaf
+nasweb
 neato
 nederlandse_spoorwegen
 ness_alarm
@@ -479,6 +492,7 @@ nmap_tracker
 nmbs
 noaa_tides
 nobo_hub
+nordpool
 norway_air
 notify_events
 notion
@@ -497,11 +511,13 @@ obihai
 octoprint
 oem
 ohmconnect
+ohme
 ollama
 ombi
 omnilogic
 oncue
 ondilo_ico
+onedrive
 onewire
 onkyo
 onvif
@@ -525,6 +541,7 @@ osramlightify
 otbr
 ourgroceries
 overkiz
+overseerr
 ovo_energy
 owntracks
 p1_monitor
@@ -532,6 +549,7 @@ palazzetti
 panasonic_bluray
 panasonic_viera
 pandora
+peblar
 peco
 pegel_online
 pencom
@@ -546,6 +564,7 @@ plum_lightpad
 pocketcasts
 point
 poolsense
+powerfox
 powerwall
 private_ble_device
 progettihwsw
@@ -563,6 +582,7 @@ pvoutput
 pvpc_hourly_pricing
 pyload
 qbittorrent
+qbus
 qingping
 qld_bushfire
 qnap
@@ -648,10 +668,12 @@ simplisafe
 sinch
 sisyphus
 sky_hub
+sky_remote
 skybeacon
 skybell
 sleepiq
 slide
+slide_local
 slimproto
 sma
 smappee
@@ -688,7 +710,6 @@ statsd
 steam_online
 steamist
 stiebel_eltron
-stookalert
 stookwijzer
 streamlabswater
 subaru
@@ -802,6 +823,7 @@ w800rf32
 wallbox
 waqi
 waterfurnace
+watergate
 watson_iot
 watttime
 weatherflow

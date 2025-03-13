@@ -71,6 +71,7 @@ azure_data_explorer
 azure_devops
 azure_event_hub
 azure_service_bus
+azure_storage
 baf
 baidu
 balboa
@@ -268,6 +269,7 @@ glances
 goalzero
 gogogate2
 goodwe
+google_drive
 google_photos
 govee_ble
 govee_light_local
@@ -294,6 +296,8 @@ hive
 hko
 hlk_sw16
 home_connect
+homeassistant_hardware
+homee
 homematic
 homematicip_cloud
 homewizard
@@ -320,6 +324,7 @@ idasen_desk
 idteck_prox
 ifttt
 iglo
+igloohome
 ign_sismologia
 ihc
 imgw_pib
@@ -329,6 +334,7 @@ inkbird
 insteon
 intellifire
 intesishome
+iometer
 iotawatt
 iotty
 iperf3
@@ -382,6 +388,7 @@ ld2410_ble
 leaone
 led_ble
 lektrico
+letpot
 lg_netcast
 lg_soundbar
 lg_thinq
@@ -412,6 +419,8 @@ marytts
 mastodon
 matrix
 maxcube
+mcp
+mcp_server
 mealie
 meater
 medcom_ble
@@ -510,6 +519,7 @@ ombi
 omnilogic
 oncue
 ondilo_ico
+onedrive
 onewire
 onkyo
 onvif
@@ -533,6 +543,7 @@ osramlightify
 otbr
 ourgroceries
 overkiz
+overseerr
 ovo_energy
 owntracks
 p1_monitor
@@ -545,6 +556,7 @@ peco
 pegel_online
 pencom
 permobil
+pglab
 philips_js
 picnic
 pilight
@@ -573,6 +585,7 @@ pvoutput
 pvpc_hourly_pricing
 pyload
 qbittorrent
+qbus
 qingping
 qld_bushfire
 qnap
@@ -639,6 +652,7 @@ sensibo
 sensirion_ble
 sensorpro
 sensorpush
+sensorpush_cloud
 sensoterra
 sentry
 senz
@@ -676,6 +690,7 @@ smlight
 sms
 snapcast
 snmp
+snoo
 snooz
 solaredge
 solaredge_local
@@ -819,6 +834,7 @@ watttime
 weatherflow
 weatherflow_cloud
 weatherkit
+webdav
 webmin
 webostv
 weheat

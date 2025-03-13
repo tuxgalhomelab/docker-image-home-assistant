@@ -1,11 +1,32 @@
---- a/lib/python3.12/site-packages/homeassistant/helpers/system_info.py	2022-03-05 00:21:19.879992714 -0800
-+++ b/lib/python3.12/site-packages/homeassistant/helpers/system_info.py	2022-03-05 00:23:40.611085400 -0800
-@@ -43,6 +43,8 @@
+diff -u -r -N a/lib/python3.12/site-packages/homeassistant/helpers/system_info.py b/lib/python3.12/site-packages/homeassistant/helpers/system_info.py
+--- a/lib/python3.12/site-packages/homeassistant/helpers/system_info.py	2025-03-12 18:29:26.324289807 -0700
++++ b/lib/python3.12/site-packages/homeassistant/helpers/system_info.py	2025-03-12 18:36:14.958772728 -0700
+@@ -13,6 +13,7 @@
+ from homeassistant.loader import bind_hass
+ from homeassistant.util.package import is_docker_env, is_virtual_env
+ from homeassistant.util.system_info import is_official_image
++from homeassistant.util.system_info import is_tuxgal_homelab_image
+ 
+ from .hassio import is_hassio
+ from .importlib import async_import_module
+@@ -80,6 +81,8 @@
      if info_object["docker"]:
-         if info_object["user"] == "root" and os.path.isfile("/OFFICIAL_IMAGE"):
+         if info_object["user"] == "root" and is_official_image():
              info_object["installation_type"] = "Home Assistant Container"
-+        elif info_object["user"] == "ha" and os.path.isfile("/opt/home-assistant/bin/hass"):
++        elif info_object["user"] == "ha" and is_tuxgal_homelab_image():
 +            info_object["installation_type"] = "Tuxgal Homelab Home Assistant Container"
          else:
              info_object["installation_type"] = "Unsupported Third Party Container"
  
+diff -u -r -N a/lib/python3.12/site-packages/homeassistant/util/system_info.py b/lib/python3.12/site-packages/homeassistant/util/system_info.py
+--- a/lib/python3.12/site-packages/homeassistant/util/system_info.py	2025-03-12 18:32:10.100489177 -0700
++++ b/lib/python3.12/site-packages/homeassistant/util/system_info.py	2025-03-12 18:34:34.508194318 -0700
+@@ -10,3 +10,8 @@
+ def is_official_image() -> bool:
+     """Return True if Home Assistant is running in an official container."""
+     return os.path.isfile("/OFFICIAL_IMAGE")
++
++@cache
++def is_tuxgal_homelab_image() -> bool:
++    """Return True if Home Assistant is running in the Tuxgal Homelab container."""
++    return os.path.isfile("/opt/home-assistant/bin/hass")

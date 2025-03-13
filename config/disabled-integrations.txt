@@ -269,8 +269,6 @@ glances
 goalzero
 gogogate2
 goodwe
-google_drive
-google_photos
 govee_ble
 govee_light_local
 gpsd
@@ -419,8 +417,6 @@ marytts
 mastodon
 matrix
 maxcube
-mcp
-mcp_server
 mealie
 meater
 medcom_ble
@@ -834,7 +830,6 @@ watttime
 weatherflow
 weatherflow_cloud
 weatherkit
-webdav
 webmin
 webostv
 weheat

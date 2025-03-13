@@ -27,9 +27,11 @@ go2rtc
 google
 google_assistant_sdk
 google_cloud
+google_drive
 google_generative_ai_conversation
 google_mail
 google_maps
+google_photos
 google_pubsub
 google_sheets
 google_tasks
@@ -51,6 +53,8 @@ lidarr
 local_calendar
 local_todo
 matter
+mcp
+mcp_server
 media_extractor
 met
 mobile_app
@@ -100,6 +104,7 @@ usgs_earthquakes_feed
 version
 wake_on_lan
 waze_travel_time
+webdav
 whois
 workday
 xmpp

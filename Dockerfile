@@ -68,6 +68,7 @@ RUN \
     --mount=type=bind,target=/scripts,from=builder,source=/scripts \
     --mount=type=bind,target=/patches,from=builder,source=/patches \
     --mount=type=bind,target=/wheels,from=builder,source=/wheels \
+    --mount=type=bind,target=/.wheels-build-info,from=builder,source=/.wheels-build-info \
     set -E -e -o pipefail \
     && export HOMELAB_VERBOSE=y \
     # Install build dependencies. \
@@ -92,6 +93,8 @@ RUN \
     && cp /scripts/start-home-assistant.sh /opt/home-assistant/ \
     && chown -R ${USER_NAME:?}:${GROUP_NAME:?} /opt/home-assistant \
     && ln -sf /opt/home-assistant/start-home-assistant.sh /opt/bin/start-home-assistant \
+    # Copy the metadata about the build. \
+    && cp -rf /.wheels-build-info /opt/home-assistant/.wheels-build-info \
     # Clean up. \
     && rm -rf /home/${USER_NAME:?}/.cache/ \
     && homelab remove patch \

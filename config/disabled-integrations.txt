@@ -90,6 +90,7 @@ bluesound
 bluetooth_tracker
 bmw_connected_drive
 bond
+bosch_alarm
 bosch_shc
 bring
 broadlink
@@ -572,6 +573,7 @@ prosegur
 proxmoxve
 prusalink
 ps4
+pterodactyl
 pulseaudio_loopback
 pure_energie
 purpleair
@@ -606,6 +608,7 @@ reddit
 refoss
 rejseplanen
 remember_the_milk
+remote_calendar
 remote_rpi_gpio
 renault
 renson
@@ -715,7 +718,6 @@ stookwijzer
 streamlabswater
 subaru
 suez_water
-sunweg
 supla
 surepetcare
 swiss_hydrological_data
@@ -865,7 +867,6 @@ youless
 youtube
 zabbix
 zamg
-zengge
 zerproc
 zestimate
 zeversolar

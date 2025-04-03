@@ -608,7 +608,6 @@ reddit
 refoss
 rejseplanen
 remember_the_milk
-remote_calendar
 remote_rpi_gpio
 renault
 renson

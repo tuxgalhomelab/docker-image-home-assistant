@@ -76,6 +76,7 @@ qrcode
 radarr
 radio_browser
 recorder
+remote_calendar
 rest
 roborock
 roku

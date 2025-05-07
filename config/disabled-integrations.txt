@@ -66,6 +66,7 @@ avea
 avion
 awair
 aws
+aws_s3
 axis
 azure_data_explorer
 azure_devops
@@ -326,6 +327,7 @@ iglo
 igloohome
 ign_sismologia
 ihc
+imeon_inverter
 imgw_pib
 incomfort
 influxdb
@@ -434,6 +436,7 @@ metoffice
 mfi
 microbees
 microsoft
+miele
 mikrotik
 mill
 minecraft_server
@@ -497,6 +500,7 @@ notify_events
 notion
 nsw_fuel_station
 nsw_rural_fire_service_feed
+ntfy
 nuheat
 nuki
 numato
@@ -514,7 +518,6 @@ ohme
 ollama
 ombi
 omnilogic
-oncue
 ondilo_ico
 onedrive
 onewire
@@ -606,6 +609,7 @@ recollect_waste
 recswitch
 reddit
 refoss
+rehlko
 rejseplanen
 remember_the_milk
 remote_rpi_gpio

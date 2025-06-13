@@ -23,6 +23,7 @@ airvisual_pro
 airzone
 airzone_cloud
 alarmdecoder
+alexa_devices
 alpha_vantage
 amazon_polly
 amberelectric
@@ -329,6 +330,7 @@ ign_sismologia
 ihc
 imeon_inverter
 imgw_pib
+immich
 incomfort
 influxdb
 inkbird
@@ -551,6 +553,7 @@ palazzetti
 panasonic_bluray
 panasonic_viera
 pandora
+paperless_ngx
 peblar
 peco
 pegel_online
@@ -570,6 +573,7 @@ poolsense
 powerfox
 powerwall
 private_ble_device
+probe_plus
 progettihwsw
 proliphix
 prosegur
@@ -632,7 +636,6 @@ roon
 route53
 rova
 rpi_power
-rtsp_to_webrtc
 ruckus_unleashed
 russound_rio
 russound_rnet
@@ -683,6 +686,7 @@ slide_local
 slimproto
 sma
 smappee
+smarla
 smart_meter_texas
 smartthings
 smarttub
@@ -849,6 +853,7 @@ wled
 wmspro
 wolflink
 ws66i
+wsdot
 wyoming
 xbox
 xeoma
@@ -875,5 +880,6 @@ zestimate
 zeversolar
 zhong_hong
 ziggo_mediabox_xl
+zimi
 zoneminder
 zwave_me

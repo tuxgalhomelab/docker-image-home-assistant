@@ -25,6 +25,7 @@ airzone_cloud
 alarmdecoder
 alexa_devices
 alpha_vantage
+altruist
 amazon_polly
 amberelectric
 ambient_network
@@ -54,6 +55,7 @@ arris_tg2492lg
 aruba
 arve
 aseko_pool_live
+assist_satellite
 asuswrt
 atag
 aten_pe
@@ -163,7 +165,6 @@ duke_energy
 dunehd
 duotecno
 dwd_weather_warnings
-dweet
 dynalite
 eafm
 easyenergy
@@ -356,7 +357,6 @@ ituran
 izone
 jewish_calendar
 joaoapps_join
-juicenet
 justnimbus
 jvc_projector
 kaiterra
@@ -565,6 +565,7 @@ picnic
 pilight
 pjlink
 plaato
+playstation_network
 plugwise
 plum_lightpad
 pocketcasts
@@ -768,6 +769,7 @@ tibber
 tikteck
 tile
 tilt_ble
+tilt_pi
 tmb
 todoist
 tolo
@@ -809,6 +811,7 @@ uvc
 v2c
 vallox
 vasttrafik
+vegehub
 velbus
 velux
 venstar

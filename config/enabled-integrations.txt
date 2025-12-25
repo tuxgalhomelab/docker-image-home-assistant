@@ -14,7 +14,6 @@ co2signal
 command_line
 compensation
 conversation
-cups
 dhcp
 dnsip
 ffmpeg
@@ -48,7 +47,6 @@ improv_ble
 isal
 iss
 jellyfin
-keyboard
 lidarr
 local_calendar
 local_todo

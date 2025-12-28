@@ -76,7 +76,7 @@ update_latest_upstream_version() {
 }
 
 package_current_release_version() {
-    current_upstream_version
+    current_ha_version
 }
 
 test_start_container() {

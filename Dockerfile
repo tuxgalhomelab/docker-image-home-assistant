@@ -1,7 +1,10 @@
 # syntax=docker/dockerfile:1
 
+ARG GO2RTC_SHA256
 ARG BASE_IMAGE_NAME
 ARG BASE_IMAGE_TAG
+FROM ghcr.io/alexxit/go2rtc@sha256:${GO2RTC_SHA256} AS go2rtc-builder
+
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG} AS builder
 
 ARG HA_PKG_UTIL_VERSION
@@ -67,6 +70,7 @@ ARG PACKAGES_TO_INSTALL
 RUN \
     --mount=type=bind,target=/scripts,from=builder,source=/scripts \
     --mount=type=bind,target=/patches,from=builder,source=/patches \
+    --mount=type=bind,target=/go2rtc,from=go2rtc-builder,source=/ \
     --mount=type=bind,target=/wheels,from=builder,source=/wheels \
     --mount=type=bind,target=/.wheels-build-info,from=builder,source=/.wheels-build-info \
     set -E -e -o pipefail \

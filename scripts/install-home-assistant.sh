@@ -42,15 +42,6 @@ pip3 install --no-cache-dir /wheels/*
 find /patches -iname *.diff -print0 | sort -z | xargs -0 -r -n 1 patch -p1 -i
 
 # Install go2rtc.
-ha_dockerfile_url="https://raw.githubusercontent.com/home-assistant/core/refs/tags/${ha_ver:?}/Dockerfile"
-go2rtc_ver=$(homelab download-file ${ha_dockerfile_url:?} | \
-    grep 'AlexxIT/go2rtc/releases/download' | \
-    sed -E 's#.+github.com/AlexxIT/go2rtc/releases/download/(.+)/go2rtc_linux_.+#\1#')
-echo "Installing go2rtc ${go2rtc_ver:?} ..."
-go2rtc_arch=$(dpkg --print-architecture)
-homelab \
-    download-file-as \
-    https://github.com/AlexxIT/go2rtc/releases/download/${go2rtc_ver:?}/go2rtc_linux_${go2rtc_arch:?} \
-    /opt/home-assistant/bin/go2rtc
-chmod +x /opt/home-assistant/bin/go2rtc
+echo "Installing go2rtc ..."
+cp /go2rtc/usr/local/bin/go2rtc /opt/home-assistant/bin/go2rtc
 /opt/home-assistant/bin/go2rtc --version

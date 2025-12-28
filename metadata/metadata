@@ -11,20 +11,45 @@ RELEASE_PACKAGE_NAME="Home Assistant"
 RELEASE_TAG_PACKAGE_NAME="ha"
 
 UPSTREAM_PACKAGE_NAME="Home Assistant"
-UPSTREAM_VERSION_CONFIG_KEY="HOME_ASSISTANT_VERSION"
-UPSTREAM_GIT_REPO="https://github.com/home-assistant/core"
+UPSTREAM_HA_VERSION_CONFIG_KEY="HOME_ASSISTANT_VERSION"
+UPSTREAM_HA_GIT_REPO="https://github.com/home-assistant/core"
+UPSTREAM_GO2RTC_SHA256_CONFIG_KEY="GO2RTC_SHA256"
 GIT_REPO_TAGS_CUSTOM_FILTERING_REGEX='^.+\.\d+b\d+$'
 
 TEST_TYPE="background"
 TEST_CONTAINER_TYPE="homeassistant"
 TEST_CONTAINER_START_WAIT_SECONDS="10"
 
+current_ha_version() {
+    get_config_arg ${UPSTREAM_HA_VERSION_CONFIG_KEY:?}
+}
+
+current_go2rtc_sha256() {
+    get_config_arg ${UPSTREAM_GO2RTC_SHA256_CONFIG_KEY:?}
+}
+
 current_upstream_version() {
-    get_config_arg ${UPSTREAM_VERSION_CONFIG_KEY:?}
+    local ha_ver="$(current_ha_version)"
+    local go2rtc_sha256="$(current_go2rtc_sha256)"
+    echo "${ha_ver:?}/${go2rtc_sha256:?}"
+}
+
+latest_ha_version() {
+    git_remote_repo_latest_tag "${UPSTREAM_HA_GIT_REPO:?}"
+}
+
+latest_go2rtc_sha256_checksum() {
+    local ha_version="$(latest_ha_version)"
+    curl --silent --fail --location --show-error \
+        https://raw.githubusercontent.com/home-assistant/core/refs/tags/${ha_version:?}/Dockerfile | \
+        grep 'ghcr.io/alexxit/go2rtc' | \
+        sed -E 's#.+ghcr\.io/alexxit/go2rtc@sha256:(.+) /usr/local/bin/go2rtc /bin/go2rtc$#\1#'
 }
 
 latest_upstream_version() {
-    git_remote_repo_latest_tag "${UPSTREAM_GIT_REPO:?}"
+    local ha_ver="$(latest_ha_version)"
+    local go2rtc_sha256="$(latest_go2rtc_sha256_checksum)"
+    echo "${ha_ver:?}/${go2rtc_sha256:?}"
 }
 
 update_integration_files() {
@@ -38,9 +63,15 @@ update_integration_files() {
 update_latest_upstream_version() {
     local cur_ver="${1:?}"
     local latest_ver="${2:?}"
-    update_integration_files "${latest_ver:?}"
-    echo "Updating ${UPSTREAM_PACKAGE_NAME:?} ${UPSTREAM_VERSION_CONFIG_KEY:?} '${cur_ver:?}' -> '${latest_ver:?}'"
-    set_config_arg "${UPSTREAM_VERSION_CONFIG_KEY:?}" "${latest_ver:?}"
+    local cur_ha_ver="$(echo "${cur_ver:?}" | cut -d '/' -f 1)"
+    local cur_go2rtc_sha256="$(echo "${cur_ver:?}" | cut -d '/' -f 2)"
+    local latest_ha_ver="$(echo "${latest_ver:?}" | cut -d '/' -f 1)"
+    local latest_go2rtc_sha256="$(echo "${latest_ver:?}" | cut -d '/' -f 2)"
+
+    update_integration_files "${latest_ha_ver:?}"
+    echo "Updating ${UPSTREAM_PACKAGE_NAME:?} ${UPSTREAM_HA_VERSION_CONFIG_KEY:?}/${UPSTREAM_GO2RTC_SHA256_CONFIG_KEY:?} '${cur_ver:?}' -> '${latest_ver:?}'"
+    set_config_arg "${UPSTREAM_HA_VERSION_CONFIG_KEY:?}" "${latest_ha_ver:?}"
+    set_config_arg "${UPSTREAM_GO2RTC_SHA256_CONFIG_KEY:?}" "${latest_go2rtc_sha256:?}"
     git add ${ARGS_FILE:?}
 }
 

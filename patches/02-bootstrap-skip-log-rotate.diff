@@ -1,0 +1,12 @@
+diff -u -r -N a/lib/python3.13/site-packages/homeassistant/bootstrap.py b/lib/python3.13/site-packages/homeassistant/bootstrap.py
+--- a/lib/python3.13/site-packages/homeassistant/bootstrap.py	2025-12-31 17:03:53.971417306 -0800
++++ b/lib/python3.13/site-packages/homeassistant/bootstrap.py	2025-12-31 17:22:33.384023738 -0800
+@@ -662,7 +662,7 @@
+         )
+     else:
+         err_handler = _RotatingFileHandlerWithoutShouldRollOver(
+-            err_log_path, backupCount=1
++            err_log_path, backupCount=0
+         )
+         try:
+             err_handler.doRollover()

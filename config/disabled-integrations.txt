@@ -16,6 +16,7 @@ airly
 airnow
 airobot
 airos
+airpatrol
 airq
 airthings
 airthings_ble
@@ -185,6 +186,7 @@ edimax
 edl21
 efergy
 egardia
+egauge
 eheimdigital
 ekeybionyx
 electrasmart
@@ -237,6 +239,7 @@ fints
 firefly_iii
 fireservicerota
 firmata
+fish_audio
 fitbit
 fivem
 fixer
@@ -247,6 +250,7 @@ flic
 flipr
 flo
 flume
+fluss
 flux_led
 foobot
 forecast_solar
@@ -256,6 +260,7 @@ foscam
 free_mobile
 freebox
 freedompro
+fressnapf_tracker
 fritz
 fritzbox
 fritzbox_callmonitor
@@ -270,6 +275,7 @@ gardena_bluetooth
 gc100
 gdacs
 geniushub
+gentex_homelink
 geo_rss_events
 geocaching
 geonetnz_quakes
@@ -861,6 +867,7 @@ wallbox
 waqi
 waterfurnace
 watergate
+watts
 watttime
 weatherflow
 weatherflow_cloud

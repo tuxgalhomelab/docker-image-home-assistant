@@ -1,6 +1,6 @@
-diff -u -r -N a/lib/python3.13/site-packages/homeassistant/helpers/system_info.py b/lib/python3.13/site-packages/homeassistant/helpers/system_info.py
---- a/lib/python3.13/site-packages/homeassistant/helpers/system_info.py	2025-03-12 18:29:26.324289807 -0700
-+++ b/lib/python3.13/site-packages/homeassistant/helpers/system_info.py	2025-03-12 18:36:14.958772728 -0700
+diff -u -r -N a/lib/python3.14/site-packages/homeassistant/helpers/system_info.py b/lib/python3.14/site-packages/homeassistant/helpers/system_info.py
+--- a/lib/python3.14/site-packages/homeassistant/helpers/system_info.py	2025-03-12 18:29:26.324289807 -0700
++++ b/lib/python3.14/site-packages/homeassistant/helpers/system_info.py	2025-03-12 18:36:14.958772728 -0700
 @@ -13,6 +13,7 @@
  from homeassistant.loader import bind_hass
  from homeassistant.util.package import is_docker_env, is_virtual_env
@@ -20,9 +20,9 @@ diff -u -r -N a/lib/python3.13/site-packages/homeassistant/helpers/system_info.p
          else:
              info_object["installation_type"] = "Unsupported Third Party Container"
  
-diff -u -r -N a/lib/python3.13/site-packages/homeassistant/util/system_info.py b/lib/python3.13/site-packages/homeassistant/util/system_info.py
---- a/lib/python3.13/site-packages/homeassistant/util/system_info.py	2025-03-12 18:32:10.100489177 -0700
-+++ b/lib/python3.13/site-packages/homeassistant/util/system_info.py	2025-03-12 18:34:34.508194318 -0700
+diff -u -r -N a/lib/python3.14/site-packages/homeassistant/util/system_info.py b/lib/python3.14/site-packages/homeassistant/util/system_info.py
+--- a/lib/python3.14/site-packages/homeassistant/util/system_info.py	2025-03-12 18:32:10.100489177 -0700
++++ b/lib/python3.14/site-packages/homeassistant/util/system_info.py	2025-03-12 18:34:34.508194318 -0700
 @@ -10,3 +10,8 @@
  def is_official_image() -> bool:
      """Return True if Home Assistant is running in an official container."""

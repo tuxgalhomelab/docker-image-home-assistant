@@ -124,6 +124,7 @@ cisco_webex_teams
 citybikes
 clementine
 cloudflare
+cloudflare_r2
 cmus
 coinbase
 color_extractor
@@ -294,6 +295,7 @@ govee_ble
 govee_light_local
 gpsd
 gree
+green_planet_energy
 greeneye_monitor
 greenwave
 growatt_server
@@ -304,6 +306,7 @@ hanna
 harman_kardon_avr
 harmony
 hassio
+hdfury
 hdmi_cec
 heatmiser
 heos
@@ -490,7 +493,6 @@ mythicbeastsdns
 myuplink
 nad
 nam
-namecheapdns
 nanoleaf
 nasweb
 neato
@@ -523,6 +525,7 @@ nordpool
 norway_air
 notify_events
 notion
+nrgkick
 nsw_fuel_station
 nsw_rural_fire_service_feed
 ntfy
@@ -598,6 +601,7 @@ poolsense
 portainer
 powerfox
 powerwall
+prana
 private_ble_device
 probe_plus
 progettihwsw
@@ -827,6 +831,7 @@ twinkly
 twitch
 twitter
 ubus
+uhoo
 ukraine_alarm
 unifi_direct
 unifiled
@@ -849,6 +854,7 @@ vera
 verisure
 versasense
 vesync
+viaggiatreno
 vicare
 victron_ble
 victron_remote_monitoring

@@ -43,7 +43,7 @@ latest_go2rtc_sha256_checksum() {
     curl --silent --fail --location --show-error \
         https://raw.githubusercontent.com/home-assistant/core/refs/tags/${ha_version:?}/Dockerfile | \
         grep 'ghcr.io/alexxit/go2rtc' | \
-        sed -E 's#.+ghcr\.io/alexxit/go2rtc@sha256:(.+) /usr/local/bin/go2rtc /bin/go2rtc$#\1#'
+        sed -E 's#.+ghcr\.io/alexxit/go2rtc:.+@sha256:(.+) /usr/local/bin/go2rtc /bin/go2rtc$#\1#'
 }
 
 latest_upstream_version() {

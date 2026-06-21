@@ -11,6 +11,7 @@ advantage_air
 aemet
 aftership
 agent_dvr
+aidot
 airgradient
 airly
 airnow
@@ -117,9 +118,11 @@ cambridge_audio
 canary
 casper_glow
 ccm15
+centriconnect
 chacon_dio
 channels
 chess_com
+cielo_home
 cisco_ios
 cisco_mobility_express
 cisco_webex_teams
@@ -143,6 +146,7 @@ crownstone
 cync
 daikin
 danfoss_air
+data_grand_lyon
 datadog
 deako
 debugpy
@@ -310,6 +314,7 @@ greenwave
 growatt_server
 gtfs
 guardian
+guntamatic
 habitica
 hanna
 harman_kardon_avr
@@ -336,7 +341,6 @@ homevolt
 homewizard
 homeworks
 honeywell
-honeywell_string_lights
 horizon
 hp_ilo
 hr_energy_qube
@@ -415,7 +419,6 @@ kmtronic
 knocki
 knx
 kodi
-konnected
 kostal_plenticore
 kraken
 kulersky
@@ -437,6 +440,7 @@ letpot
 lg_netcast
 lg_soundbar
 lg_thinq
+lg_tv_rs232
 libre_hardware_monitor
 lichess
 liebherr
@@ -489,6 +493,7 @@ mikrotik
 mill
 minecraft_server
 minio
+mitsubishi_comfort
 moat
 mochad
 modbus
@@ -549,7 +554,6 @@ nordpool
 norway_air
 notify_events
 notion
-novy_cooker_hood
 nrgkick
 nsw_fuel_station
 nsw_rural_fire_service_feed
@@ -599,12 +603,15 @@ orvibo
 osoenergy
 osramlightify
 otbr
+ouman_eh_800
 ourgroceries
 overkiz
 overseerr
+ovhcloud_ai_endpoints
 ovo_energy
 owntracks
 p1_monitor
+paj_gps
 palazzetti
 panasonic_bluray
 panasonic_viera
@@ -639,6 +646,7 @@ prowl
 proxmoxve
 prusalink
 ps4
+ptdevices
 pterodactyl
 pulseaudio_loopback
 pure_energie
@@ -897,6 +905,7 @@ victron_ble
 victron_gx
 victron_remote_monitoring
 vilfo
+vistapool
 vivotek
 vizio
 vlc
@@ -940,6 +949,7 @@ xiaomi_ble
 xiaomi_miio
 xiaomi_tv
 xs1
+xthings_cloud
 yale
 yale_smart_alarm
 yalexs_ble
@@ -949,6 +959,7 @@ yeelight
 yeelightsunflower
 yi
 yolink
+yoto
 youless
 youtube
 zabbix

@@ -66,6 +66,7 @@ otp
 pi_hole
 ping
 plex
+powerwall
 profiler
 prometheus
 proxy

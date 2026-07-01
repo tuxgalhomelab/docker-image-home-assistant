@@ -1,7 +1,6 @@
 abode
 acaia
 accuweather
-acer_projector
 acmeda
 actron_air
 adax
@@ -37,7 +36,6 @@ amberelectric
 ambient_network
 ambient_station
 amcrest
-ampio
 analytics_insights
 android_ip_webcam
 androidtv
@@ -56,16 +54,17 @@ apsystems
 aquacell
 aqualogic
 aquostv
+aqvify
 aranet
 arcam_fmj
 arris_tg2492lg
 aruba
 arve
+arwn
 aseko_pool_live
 assist_satellite
 asuswrt
 atag
-aten_pe
 atome
 august
 aurora
@@ -74,7 +73,6 @@ aussie_broadband
 autarco
 autoskope
 avea
-avion
 awair
 aws
 aws_s3
@@ -90,7 +88,6 @@ baidu
 balboa
 bang_olufsen
 bbox
-beewi_smartclim
 bitcoin
 bizkaibus
 blackbird
@@ -121,13 +118,13 @@ ccm15
 centriconnect
 chacon_dio
 channels
+chef_iq
 chess_com
 cielo_home
 cisco_ios
 cisco_mobility_express
 cisco_webex_teams
 citybikes
-clementine
 cloudflare
 cloudflare_r2
 cmus
@@ -203,7 +200,6 @@ electrasmart
 electric_kiwi
 elevenlabs
 elgato
-eliqonline
 elkm1
 elmax
 elv
@@ -215,12 +211,14 @@ emonitor
 emulated_kasa
 emulated_roku
 energenie_power_sockets
+energieleser
 energyid
 energyzero
 enigma2
 enocean
 enphase_envoy
 entur_public_transport
+envertech_evt800
 environment_canada
 envisalink
 ephember
@@ -297,7 +295,6 @@ ghost
 gios
 github
 gitlab_ci
-gitter
 glances
 goalzero
 gogogate2
@@ -309,8 +306,8 @@ govee_light_local
 gpsd
 gree
 green_planet_energy
+greencell
 greeneye_monitor
-greenwave
 growatt_server
 gtfs
 guardian
@@ -324,6 +321,7 @@ hdfury
 hdmi_cec
 heatmiser
 hegel
+helty
 heos
 here_travel_time
 hikvision
@@ -372,6 +370,7 @@ ihc
 imeon_inverter
 imgw_pib
 immich
+imou
 incomfort
 indevolt
 inels
@@ -476,6 +475,7 @@ meater
 medcom_ble
 mediaroom
 melcloud
+melcloud_home
 melissa
 melnor
 message_bird
@@ -509,7 +509,6 @@ motionblinds_ble
 motioneye
 motionmount
 mpd
-msteams
 mta
 mullvad
 music_assistant
@@ -720,7 +719,6 @@ saunum
 schlage
 schluter
 screenlogic
-scsgate
 sendgrid
 sense
 sensibo
@@ -801,6 +799,7 @@ supla
 surepetcare
 swiss_hydrological_data
 swiss_public_transport
+swisscom
 switchbee
 switchbot
 switchbot_cloud
@@ -839,7 +838,6 @@ thethingsnetwork
 thingspeak
 thinkingcleaner
 tibber
-tikteck
 tile
 tilt_ble
 tilt_pi
@@ -878,7 +876,6 @@ ukraine_alarm
 unifi_access
 unifi_direct
 unifi_discovery
-unifiled
 unifiprotect
 upb
 upc_connect
@@ -921,6 +918,7 @@ waterfurnace
 watergate
 watts
 watttime
+wattwaechter
 weatherflow
 weatherflow_cloud
 weatherkit

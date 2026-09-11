@@ -88,6 +88,7 @@ baidu
 balboa
 bang_olufsen
 bbox
+besen
 bitcoin
 bizkaibus
 blackbird
@@ -254,10 +255,12 @@ fivem
 fixer
 fjaraskupan
 fleetgo
+flexit
 flexit_bacnet
 flic
 flipr
 flo
+flow_it
 flume
 fluss
 flux_led
@@ -276,6 +279,7 @@ fritzbox
 fritzbox_callmonitor
 fronius
 frontier_silicon
+fuelprices_dk
 fujitsu_fglair
 fully_kiosk
 fumis
@@ -283,6 +287,7 @@ futurenow
 fyta
 garages_amsterdam
 gardena_bluetooth
+gatus
 gc100
 gdacs
 geniushub
@@ -291,6 +296,7 @@ geo_rss_events
 geocaching
 geonetnz_quakes
 geonetnz_volcano
+geosphere_austria_warnings
 ghost
 gios
 github
@@ -300,6 +306,7 @@ goalzero
 gogogate2
 goodwe
 google_air_quality
+google_health
 google_weather
 govee_ble
 govee_light_local
@@ -314,7 +321,9 @@ guardian
 guntamatic
 habitica
 hanna
+harbor
 harman_kardon_avr
+harman_luxury
 harmony
 hassio
 hdfury
@@ -340,6 +349,8 @@ homewizard
 homeworks
 honeywell
 horizon
+hortimax
+hotspring
 hp_ilo
 hr_energy_qube
 huawei_lte
@@ -391,6 +402,7 @@ iqvia
 irish_rail_transport
 irm_kmi
 iron_os
+iseo_argo_ble
 iskra
 islamic_prayer_times
 israel_rail
@@ -405,6 +417,7 @@ justnimbus
 jvc_projector
 kaiterra
 kaleidescape
+karakeep
 keba
 keenetic_ndms2
 kef
@@ -441,6 +454,7 @@ lg_soundbar
 lg_thinq
 lg_tv_rs232
 libre_hardware_monitor
+librenms
 lichess
 liebherr
 lifx
@@ -450,8 +464,10 @@ linkplay
 linode
 linux_battery
 litejet
+litellm
 litterrobot
 livisi
+llama_cpp
 lojack
 london_underground
 lookin
@@ -463,6 +479,7 @@ lupusec
 lutron
 lutron_caseta
 lw12wifi
+lyngdorf
 lyric
 madvr
 mailgun
@@ -488,6 +505,7 @@ metoffice
 mfi
 microbees
 microsoft
+midea
 miele
 mikrotik
 mill
@@ -525,6 +543,7 @@ nanoleaf
 nasweb
 neato
 nederlandse_spoorwegen
+neopool
 ness_alarm
 netatmo
 netdata
@@ -532,6 +551,7 @@ netgear
 netgear_lte
 netio
 neurio_energy
+nexblue
 nexia
 nextbus
 nextcloud
@@ -619,7 +639,6 @@ peblar
 peco
 pegel_online
 pencom
-permobil
 pglab
 philips_js
 picnic
@@ -712,12 +731,14 @@ ruuvitag_ble
 rympro
 sabnzbd
 saj
+samsung_exlink
 samsungtv
 sanix
 satel_integra
 saunum
 schlage
 schluter
+scorpiontrack
 screenlogic
 sendgrid
 sense
@@ -740,6 +761,7 @@ shodan
 sia
 sighthound
 signal_messenger
+silla_prism
 simplefin
 simplepush
 simplisafe
@@ -766,6 +788,7 @@ snapcast
 snmp
 snoo
 snooz
+sofar
 solaredge
 solaredge_local
 solarlog
@@ -779,6 +802,7 @@ sonos
 sony_projector
 soundtouch
 spc
+specialized_turbo
 splunk
 squeezebox
 srp_energy
@@ -846,6 +870,7 @@ todoist
 togrill
 tolo
 tomorrowio
+tonewinner
 toon
 totalconnect
 touchline
@@ -904,7 +929,6 @@ vilfo
 vistapool
 vivotek
 vizio
-vlc
 vlc_telnet
 vodafone_station
 voip

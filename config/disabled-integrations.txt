@@ -77,6 +77,7 @@ awair
 aws
 aws_s3
 axis
+axle_energy
 azure_data_explorer
 azure_devops
 azure_event_hub
@@ -88,7 +89,9 @@ baidu
 balboa
 bang_olufsen
 bbox
+besen
 bitcoin
+bitvis
 bizkaibus
 blackbird
 blebox
@@ -229,7 +232,6 @@ eq3btsmart
 escea
 esphome
 essent
-etherscan
 eufy
 eufylife_ble
 eurotronic_cometblue
@@ -254,10 +256,12 @@ fivem
 fixer
 fjaraskupan
 fleetgo
+flexit
 flexit_bacnet
 flic
 flipr
 flo
+flow_it
 flume
 fluss
 flux_led
@@ -276,6 +280,7 @@ fritzbox
 fritzbox_callmonitor
 fronius
 frontier_silicon
+fuelprices_dk
 fujitsu_fglair
 fully_kiosk
 fumis
@@ -283,6 +288,7 @@ futurenow
 fyta
 garages_amsterdam
 gardena_bluetooth
+gatus
 gc100
 gdacs
 geniushub
@@ -291,6 +297,7 @@ geo_rss_events
 geocaching
 geonetnz_quakes
 geonetnz_volcano
+geosphere_austria_warnings
 ghost
 gios
 github
@@ -300,6 +307,7 @@ goalzero
 gogogate2
 goodwe
 google_air_quality
+google_health
 google_weather
 govee_ble
 govee_light_local
@@ -314,7 +322,9 @@ guardian
 guntamatic
 habitica
 hanna
+harbor
 harman_kardon_avr
+harman_luxury
 harmony
 hassio
 hdfury
@@ -340,6 +350,8 @@ homewizard
 homeworks
 honeywell
 horizon
+hortimax
+hotspring
 hp_ilo
 hr_energy_qube
 huawei_lte
@@ -373,6 +385,7 @@ immich
 imou
 incomfort
 indevolt
+indi_allsky
 inels
 influxdb
 infrared
@@ -391,6 +404,7 @@ iqvia
 irish_rail_transport
 irm_kmi
 iron_os
+iseo_argo_ble
 iskra
 islamic_prayer_times
 israel_rail
@@ -403,8 +417,10 @@ jewish_calendar
 joaoapps_join
 justnimbus
 jvc_projector
+kaco_modbus
 kaiterra
 kaleidescape
+karakeep
 keba
 keenetic_ndms2
 kef
@@ -441,17 +457,19 @@ lg_soundbar
 lg_thinq
 lg_tv_rs232
 libre_hardware_monitor
+librenms
 lichess
 liebherr
 lifx
 lightwave
 limitlessled
 linkplay
-linode
 linux_battery
 litejet
+litellm
 litterrobot
 livisi
+llama_cpp
 lojack
 london_underground
 lookin
@@ -463,6 +481,7 @@ lupusec
 lutron
 lutron_caseta
 lw12wifi
+lyngdorf
 lyric
 madvr
 mailgun
@@ -488,6 +507,7 @@ metoffice
 mfi
 microbees
 microsoft
+midea
 miele
 mikrotik
 mill
@@ -514,6 +534,7 @@ mullvad
 music_assistant
 mutesync
 mvglive
+my_pv
 myneomitis
 mysensors
 mystrom
@@ -525,6 +546,7 @@ nanoleaf
 nasweb
 neato
 nederlandse_spoorwegen
+neopool
 ness_alarm
 netatmo
 netdata
@@ -532,6 +554,7 @@ netgear
 netgear_lte
 netio
 neurio_energy
+nexblue
 nexia
 nextbus
 nextcloud
@@ -597,7 +620,6 @@ openuv
 opnsense
 opple
 oralb
-oru
 orvibo
 osoenergy
 osramlightify
@@ -619,7 +641,6 @@ peblar
 peco
 pegel_online
 pencom
-permobil
 pglab
 philips_js
 picnic
@@ -668,7 +689,6 @@ rachio
 radio_frequency
 radiotherm
 rainbird
-raincloud
 rainforest_eagle
 rainforest_raven
 rainmachine
@@ -712,12 +732,14 @@ ruuvitag_ble
 rympro
 sabnzbd
 saj
+samsung_exlink
 samsungtv
 sanix
 satel_integra
 saunum
 schlage
 schluter
+scorpiontrack
 screenlogic
 sendgrid
 sense
@@ -740,6 +762,7 @@ shodan
 sia
 sighthound
 signal_messenger
+silla_prism
 simplefin
 simplepush
 simplisafe
@@ -762,12 +785,14 @@ smarttub
 smarty
 smhi
 smlight
+smtp
 snapcast
 snmp
 snoo
 snooz
+sofar
 solaredge
-solaredge_local
+solaredge_modbus
 solarlog
 solarman
 solax
@@ -779,6 +804,7 @@ sonos
 sony_projector
 soundtouch
 spc
+specialized_turbo
 splunk
 squeezebox
 srp_energy
@@ -795,6 +821,7 @@ streamlabswater
 subaru
 suez_water
 sunricher_dali
+sunsynk
 supla
 surepetcare
 swiss_hydrological_data
@@ -815,7 +842,6 @@ tado
 tailscale
 tailwind
 tami4
-tank_utility
 tankerkoenig
 tapsaff
 tasmota
@@ -832,11 +858,13 @@ tesla_fleet
 tesla_wall_connector
 teslemetry
 tessie
+theben_conexa
 thermobeacon
 thermopro
 thethingsnetwork
 thingspeak
 thinkingcleaner
+threema
 tibber
 tile
 tilt_ble
@@ -846,6 +874,7 @@ todoist
 togrill
 tolo
 tomorrowio
+tonewinner
 toon
 totalconnect
 touchline
@@ -861,7 +890,6 @@ trafikverket_train
 trafikverket_weatherstation
 trane
 transport_nsw
-travisci
 triggercmd
 trmnl
 tuya
@@ -902,9 +930,9 @@ victron_gx
 victron_remote_monitoring
 vilfo
 vistapool
+vitesy
 vivotek
 vizio
-vlc
 vlc_telnet
 vodafone_station
 voip
@@ -930,6 +958,7 @@ whirlpool
 wiffi
 wiim
 wilight
+willow
 wirelesstag
 withings
 wiz
@@ -962,11 +991,11 @@ youtube
 zabbix
 zamg
 zerproc
-zestimate
 zeversolar
 zhong_hong
 ziggo_mediabox_xl
 zimi
 zinvolt
 zoneminder
+zonneplan
 zwave_me
